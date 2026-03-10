@@ -2,9 +2,9 @@
 
 public class ValuableItem
 {
-    public int value {private set; get;}
+    public int value;
 
-    ValuableItem(int value)
+    public ValuableItem(int value)
     {
         value = value;
     }
