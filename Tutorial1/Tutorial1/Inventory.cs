@@ -2,10 +2,10 @@
 
 public class Inventory
 {
-    private ValuableItem[] items;
+    public ValuableItem[] items;
     int amount = 0;
 
-    Inventory()
+    public Inventory()
     {
         items = new ValuableItem[10];
     }
