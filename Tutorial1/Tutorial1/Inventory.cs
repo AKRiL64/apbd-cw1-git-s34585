@@ -22,6 +22,14 @@ public class Inventory
         return maxItem;
     }
 
+    public ValuableItem GetMinItem() {
+        ValuableItem minItem = items[0];
+        foreach (var item in items) {
+            if (item.value < minItem.value) minItem = item;
+        }
+        return minItem;
+    }
+
     public void AddItem(ValuableItem item)
     {
         if (amount >= items.Length - 1) throw new Exception();
