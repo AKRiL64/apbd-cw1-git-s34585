@@ -14,6 +14,14 @@ public class Inventory
         return index >= amount ? throw new Exception() : items[index];
     }
 
+    public ValuableItem GetMaxItem() {
+        ValuableItem maxItem = items[0];
+        foreach (var item in items) {
+            if (item.value > maxItem.value) maxItem = item;
+        }
+        return maxItem;
+    }
+
     public void AddItem(ValuableItem item)
     {
         if (amount >= items.Length - 1) throw new Exception();
