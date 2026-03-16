@@ -19,6 +19,8 @@ public class Inventory
         foreach (var item in items) {
             if (item.value > maxItem.value) maxItem = item;
         }
+
+        Console.Out.WriteLine("Max item: " + maxItem.value + "");
         return maxItem;
     }
 
@@ -27,6 +29,7 @@ public class Inventory
         foreach (var item in items) {
             if (item.value < minItem.value) minItem = item;
         }
+        Console.Out.WriteLine("Min item: " + minItem.value + "");
         return minItem;
     }
 
