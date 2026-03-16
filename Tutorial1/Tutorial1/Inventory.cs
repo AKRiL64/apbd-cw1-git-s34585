@@ -9,7 +9,11 @@ public class Inventory
     {
         items = new ValuableItem[10];
     }
-
+    
+    public ValuableItem GetItem(int index)
+    {
+        return items[index];
+    }
     public void AddItem(ValuableItem item)
     {
         if (amount >= items.Length - 1) throw new Exception();
